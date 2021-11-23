@@ -9,11 +9,8 @@ IEEE has recommended 46 - 1500 bytes. It can vary as per your choice.
 % We start with a signal packet
 
 % 1) Then mac layer combines this packet with some info to make a frame:
-%  __________________________________________________________________
 % | Dest mac addr | src mac addr | Length of| Packet        | CRC     |
-% | (6 bytes)     | (6 bytes)    | L3 packet| from layer 3  | 4 bytes |
-% |               |              | 2 bytes  | 46-1500 bytes |         |
-% |_______________|______________|__________|_______________|_________|
+
 
 % CRC is called cyclic redundancy check. It is used for checking if the
 % transmission was accurate or erroneous.
@@ -27,10 +24,7 @@ IEEE has recommended 46 - 1500 bytes. It can vary as per your choice.
 % 1.3) Generate the mac frame using L3_to_macframe.m
 
 % 2) The phy layer combines this frame with some extra bits:
-%  ______________________________________________
-% | Preamble  | SFD    | Length  | mac frame     |<---Interpacket Gap--->
-% | 7 bytes   | 1 byte | 2 bytes | 64-1522 bytes | time delay bw packets
-% |___________|________|_________|_______________|
+% | Preamble  | SFD    | Length  | mac frame     |
 
 
 % 3) Before transmission, the sender checks if the channel is in use. To do that send a dummy message
