@@ -1,15 +1,15 @@
 # PHY-and-MAC-layer-implementation
 
-Here is a MATLAB implementation of the PHY AND MAC layers of the OSI MODEL.
-Most of the code is explained in main.m through comments, but here is an overall overview of the process of transmitting the signal
+## Here is a MATLAB implementation of the PHY AND MAC layers of the OSI MODEL.
+* Most of the code is explained in main.m through comments, but here is an overall overview of the process of transmitting the signal
 
 0) The message to be transmitted is actually divided into packets by the layers which are above the mac layer. You are free to divide the message as you wish. Longer packets will make it difficult to avoid collisions.
 IEEE has recommended 46 - 1500 bytes. It can vary as per your choice.
 
-% We start with a signal packet
+We start with a signal packet
 
-% 1) Then mac layer combines this packet with some info to make a frame:
-% | Dest mac addr | src mac addr | Length of| Packet        | CRC     |
+1) Then mac layer combines this packet with some info to make a frame:
+| Dest mac addr | src mac addr | Length of| Packet        | CRC     |
 
 
 % CRC is called cyclic redundancy check. It is used for checking if the
