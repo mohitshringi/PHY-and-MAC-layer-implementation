@@ -9,7 +9,7 @@ IEEE has recommended 46 - 1500 bytes. It can vary as per your choice.
 We start with a signal packet
 
 1) Then mac layer combines this packet with some info to make a frame:  
-| Dest mac addr | src mac addr | Length of| Packet        | CRC     |  
+| Dest mac addr | src mac addr | Length | Packet        | CRC     |  
 CRC is called cyclic redundancy check. It is used for checking if the
 transmission was accurate or erroneous.  
 
